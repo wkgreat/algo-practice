@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<algo-practice>",
+            "request": "launch",
+            "mainClass": "wk.leetcode.huawei.Solution",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution3<algo-practice>",
+            "request": "launch",
+            "mainClass": "wk.leetcode.huawei.Solution3",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<algo-practice>",
+            "request": "launch",
+            "mainClass": "wk.leetcode.huawei.temp.Main",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main2<algo-practice>",
+            "request": "launch",
+            "mainClass": "wk.leetcode.huawei.temp.Main2",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution3<algo-practice>(1)",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t15.Solution3",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<algo-practice>(1)",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t16.Solution",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<algo-practice>(2)",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t20.Solution",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution<algo-practice>(3)",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t22.Solution",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Solution2<algo-practice>",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t22.Solution2",
+            "projectName": "algo-practice"
+        }
+    ]
+}

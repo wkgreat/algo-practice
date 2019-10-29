@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * {@link https://leetcode-cn.com/problems/3sum/}
  * a+b+c==0
  * 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
  * 注意：答案中不可以包含重复的三元组。
@@ -44,7 +45,6 @@ public class Solution1 {
     }
 
 }
-
 
 /**
  *
@@ -94,33 +94,32 @@ class Solution3 {
     public List<List<Integer>> threeSum(int[] nums) {
 
         List<List<Integer>> results = new ArrayList<List<Integer>>();
-        Arrays.sort(nums);
+        Arrays.sort(nums); //先排序，从小到大
 
         for(int i=0; i<nums.length-2 && nums[i]<=0; ++i) {
-            if(i>0 && nums[i]==nums[i-1]) continue;
+            if(i>0 && nums[i]==nums[i-1]) continue; //从左边开始取数字，跳过重复的
 
-            int j = nums.length-1;
-            int k = i+1;
+            int j = nums.length-1; //从最右边开始取数字
+            int k = i+1; //从i的右边取数字
 
-            while(k<j) {
+            while(k<j) { //k 要一直在 j 的左边
                 int s = nums[i]+nums[j]+nums[k];
-                if(s==0) {
+                if(s==0) { //和是否相等
                     List<Integer> theList = new ArrayList<Integer>();
                     theList.add(nums[i]);
                     theList.add(nums[k]);
                     theList.add(nums[j]);
                     results.add(theList);
-                    k++;
-                    j--;
-                    while(k < j && nums[k]==nums[k-1]) k++;
+                    k++; j--; //左右收缩
+                    while (k<j && nums[k]==nums[k-1]) k++;
                     while (k<j && nums[j]==nums[j+1]) j--;
 
                 }
-                if(s<0) {
+                if(s<0) { //如果小了, 左边收缩
                     k++;
-                    while(k < j && nums[k]==nums[k-1]) k++;
+                    while (k<j && nums[k]==nums[k-1]) k++;
                 }
-                if(s>0) {
+                if(s>0) { //如果大了, 右边收缩
                     j--;
                     while (k<j && nums[j]==nums[j+1]) j--;
                 }
