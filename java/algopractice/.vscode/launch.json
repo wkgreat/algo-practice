@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BitMove",
+            "request": "launch",
+            "mainClass": "wk.algo.bit.BitMove",
+            "projectName": "algo-practice"
+        }
+    ]
+}
