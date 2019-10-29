@@ -9,6 +9,7 @@ java/.idea/misc.xml
 java/.idea/modules.xml
 java/.idea/sbt.xml
 java/.idea/vcs.xml
+java/algopractice/target/
 .idea/.gitignore
 .idea/algo-practice.iml
 .idea/misc.xml

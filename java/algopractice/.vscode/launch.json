@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Solution",
+            "request": "launch",
+            "mainClass": "wk.leetcode.t29.Solution",
+            "projectName": "algo-practice"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BitMove",
             "request": "launch",
             "mainClass": "wk.algo.bit.BitMove",
