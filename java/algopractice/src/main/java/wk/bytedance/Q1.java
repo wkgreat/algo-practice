@@ -1,7 +1,5 @@
 package wk.bytedance;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 public class Q1 {
 
     /**
