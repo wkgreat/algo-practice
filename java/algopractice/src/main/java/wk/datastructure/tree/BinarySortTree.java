@@ -76,7 +76,7 @@ public class BinarySortTree {
     }
 
     /**
-     * 用于delete方法，替换node1对应的子树 为 node2对应的子树，并且不改变父亲与子树的关系
+     * 用于delete方法，替换node1对应的子树 为 node2对应的子树，并不改变父亲与子树的关系
      * */
     private void _replace(Node node1, Node node2) {
         if(root==node1) {
@@ -94,7 +94,7 @@ public class BinarySortTree {
     }
 
     /**
-     * 目的：使树的根节点的左子树为空，方式通过顺时针旋转概述实现
+     * 目的：使树的根节点的左子树为空，方式通过顺时针旋转实现
      * 功能：顺时针旋转树 b为最小元素，要将b旋转为该树的根元素，这就保证该树的左子树为空
      * 先找到最小元素b
      * 将b的原右子树赋给临时变量t
@@ -116,6 +116,26 @@ public class BinarySortTree {
         node.p = minNode;
         _replace(minNode, t);
         return minNode;
+    }
+
+    /**
+     * 目的：使树根节点的左子树为空，方式通过逆时针旋转树实现
+     * 功能：逆时针旋转树
+     *      a           b
+     *     : :         /
+     *        b  ==>  a
+     *       /       : :
+     *      c           c
+     * */
+    private Node _rotateCounterClockwise(Node node) {
+        if(node==null) return null;
+        if(node.right==null) return node;
+        Node maxNode = _maximum(node);
+        Node t = maxNode.left;
+        maxNode.left = node;
+        node.p = maxNode;
+        _replace(maxNode,t);
+        return maxNode;
     }
 
     /**
