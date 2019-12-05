@@ -1,12 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/wkgreat/codes/projects/algo-practice/c
-CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.14/Modules/CMakeDetermineCCompiler.cmake:49 (message):
-  Could not find compiler set in environment variable CC:
-
-  x86_64-apple-darwin13.4.0-clang.
-Call Stack (most recent call first):
-  CMakeLists.txt:2 (project)
-
-
-CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
--- Configuring incomplete, errors occurred!
-See also "/Users/wkgreat/codes/projects/algo-practice/c/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/wkgreat/codes/projects/algo-practice/c/cmake-build-debug

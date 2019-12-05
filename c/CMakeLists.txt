@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
-project(c C)
 
-set(CMAKE_C_STANDARD 99)
+project(algo-practice)
+add_definitions(-std=c++17)
 
-add_executable(c main.c)
+add_executable(a.out src/main.cpp)
