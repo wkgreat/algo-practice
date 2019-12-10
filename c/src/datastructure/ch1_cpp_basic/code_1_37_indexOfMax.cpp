@@ -3,7 +3,7 @@
  * 寻找序列中最大元素的索引
  * */
 #include <iostream>
-#include "../ch1_cpp_basic/code_1_26_illegalParameterValue.cpp"
+#include "code_1_26_exception.h"
 
 using namespace std;
 
