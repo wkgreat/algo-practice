@@ -4,7 +4,7 @@
 
 #include <sstream>
 #include "vectorList.h"
-#include "../ch1_cpp_basic/code_1_26_illegalParameterValue.cpp"
+#include "../ch1_cpp_basic/code_1_26_exception.h"
 
 template <class T>
 vectorList<T>::vectorList(int initialCapacity)

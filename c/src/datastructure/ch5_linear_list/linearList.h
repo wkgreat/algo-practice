@@ -23,6 +23,9 @@ public:
     virtual void output(std::ostream& out) const = 0;
 };
 
+/**
+ * 重载<<运算符
+ * */
 template <class T>
 std::ostream& operator<<(std::ostream& out, const linearList<T>& x)
 {

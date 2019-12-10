@@ -4,7 +4,7 @@
 
 #include <sstream>
 #include "arrayList.h"
-#include "../ch1_cpp_basic/code_1_26_illegalParameterValue.cpp"
+#include "../ch1_cpp_basic/code_1_26_exception.h"
 
 using namespace std;
 
