@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./datastructure/ch2_efficiency/example_2_5_ranking.cpp"
+#include "./datastructure/ch5_linear_list/chain.cpp"
 
 int main() {
-    test();
+    chain_test();
 }
