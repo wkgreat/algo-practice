@@ -5,14 +5,16 @@
 #ifndef ALGO_PRACTICE_MATRIX_H
 #define ALGO_PRACTICE_MATRIX_H
 
-#include <iostream>
+#include <ostream>
 #include "../ch1_cpp_basic/code_1_26_exception.h"
 using namespace std;
 
 template <class T>
 class matrix {
 
-    friend ostream &operator <<(ostream&, const matrix<T>&);
+    //TODO ?? 将<<重载方法定义为友元就会报错，要把友元定义去掉
+    //friend ostream& operator <<(ostream&, const matrix<T>&);
+
 public:
     matrix(int theRows=0, int theColumns=0);
     matrix(const matrix<T>&);
@@ -76,8 +78,15 @@ template <class T>
 T& matrix<T>::operator()(int i, int j) const
 {
     if(i<1 || i>theRows || j<1 || j>theColumns)
-        throw maitrixIndexOutOfBounds();
+        throw matrixIndexOutOfBounds();
     return element[ (i-1) * theColumns + j-1 ];
+}
+
+//一元+ 操作符
+template <class T>
+matrix<T> matrix<T>::operator+() const
+{
+    return matrix<T>(*this);
 }
 
 //矩阵加法
@@ -89,6 +98,28 @@ matrix<T> matrix<T>::operator+(const matrix<T> & m) const
     matrix<T> w(theRows, theColumns);
     for(int i=0; i<theRows*theColumns; i++) //直接对数组进行操作
         w.element[i] = element[i] + m.element[i];
+    return w;
+}
+
+//一元- 操作符
+template <class T>
+matrix<T> matrix<T>::operator-() const
+{
+    matrix<T> m(theRows, theColumns);
+    auto f = [](T t) -> T { return -t;};
+    transform(element, element+theRows*theColumns, m.element,f);
+    return m;
+}
+
+//矩阵减法
+template <class T>
+matrix<T> matrix<T>::operator-(const matrix<T> & m) const
+{ //返回矩阵 w = (*this) + m
+    if(theRows!=m.theRows || theColumns!=m.theColumns)
+        throw matrixSizeMismatch();
+    matrix<T> w(theRows, theColumns);
+    for(int i=0; i<theRows*theColumns; i++) //直接对数组进行操作
+        w.element[i] = element[i] - m.element[i];
     return w;
 }
 
@@ -128,6 +159,28 @@ matrix<T> matrix<T>::operator*(const matrix<T> & m) const
         ct += theColumns; //this下一行
         cm = 0; //m的第一列
     }
+    return w;
+}
+
+template <class T>
+matrix<T>& matrix<T>::operator+=(const T& a)
+{
+    auto f = [a](T t) -> T { return t+a;};
+    transform(element,element+theRows*theColumns,element,f);
+    return *this;
+}
+
+template <class T>
+std::ostream& operator<<(std::ostream & out, const matrix<T>& m) {
+    for(int i=1; i<=m.rows(); i++)
+    {
+        for(int j=1; j<=m.columns(); j++)
+        {
+            out << m(i,j) << " ";
+        }
+        out << endl;
+    }
+    return out;
 }
 
 #endif //ALGO_PRACTICE_MATRIX_H

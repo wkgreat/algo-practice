@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./datastructure/ch5_linear_list/chain.cpp"
+#include "./datastructure/ch6_array_matrix/matrix.cpp"
 
 int main() {
-    chain_test();
+    matrix_test();
 }
