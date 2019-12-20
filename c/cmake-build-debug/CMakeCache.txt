@@ -221,12 +221,6 @@ algo-practice_BINARY_DIR:STATIC=/Users/wkgreat/codes/projects/algo-practice/c/cm
 //Value Computed by CMake
 algo-practice_SOURCE_DIR:STATIC=/Users/wkgreat/codes/projects/algo-practice/c
 
-//Value Computed by CMake
-learning-cpp_BINARY_DIR:STATIC=/Users/wkgreat/codes/projects/algo-practice/c/cmake-build-debug
-
-//Value Computed by CMake
-learning-cpp_SOURCE_DIR:STATIC=/Users/wkgreat/codes/projects/algo-practice/c
-
 
 ########################
 # INTERNAL cache entries

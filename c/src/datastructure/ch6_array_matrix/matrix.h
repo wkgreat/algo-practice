@@ -1,6 +1,12 @@
-//
-// Created by ke.wang7 on 2019/12/11.
-//
+/**
+ * 基本矩阵实现，还有其他矩阵类型
+ * 对角矩阵
+ * 三对角矩阵
+ * 下三角矩阵
+ * 上三角矩阵
+ * 对称矩阵
+ * 稀疏矩阵
+ * */
 
 #ifndef ALGO_PRACTICE_MATRIX_H
 #define ALGO_PRACTICE_MATRIX_H
