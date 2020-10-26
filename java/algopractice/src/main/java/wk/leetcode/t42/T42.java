@@ -17,6 +17,8 @@ public class T42 {
  * 厉害了，自己写的
  * 执行用时：1 ms, 在所有 Java 提交中击败了99.99%的用户
  * 内存消耗：38 MB, 在所有 Java 提交中击败了95.30%的用户
+ *
+ * 建议看官方解法：有3中方法：动态编程法，栈方法，双指针法
  * */
 class Solution {
     public int trap(int[] height) {
