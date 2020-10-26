@@ -42,6 +42,10 @@ private:
     T* element;
 };
 
+/**
+ * 基本矩阵实现
+ * Implementation
+ * */
 template <class T>
 matrix<T>::matrix(int theRows, int theColumns)
 {

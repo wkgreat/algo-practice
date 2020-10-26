@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./datastructure/ch6_array_matrix/matrix.cpp"
+#include "../src/datastructure/ch8_stack/hanoi.cpp"
 
 int main() {
-    matrix_test();
+    hanoi_test();
 }

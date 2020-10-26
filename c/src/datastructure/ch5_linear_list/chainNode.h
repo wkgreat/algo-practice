@@ -13,7 +13,7 @@ struct chainNode //这里使用了struct
 
     chainNode(){}
     chainNode(const T& element) {this->element = element;}
-    chainNode(const T& element, chainNode<T>* next)
+    chainNode(const T& element, chainNode<T>* next) // ** WK 注意next的思想
     {
         this->element = element;
         this->next = next;
